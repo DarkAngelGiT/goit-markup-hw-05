@@ -699,6 +699,7 @@ body {
   transform: translateY(-100%);
 }
 
-.examples-img-box:hover .box-overlay {
+.examples-link:hover .box-overlay,
+.examples-link:focus .box-overlay {
   transform: translateY(0);
 }
