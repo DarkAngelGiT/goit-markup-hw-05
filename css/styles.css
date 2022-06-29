@@ -196,6 +196,8 @@ body {
 .contact-link {
   display: flex;
   align-items: center;
+  padding-bottom: 31px;
+  padding-top: 32px;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
@@ -301,7 +303,7 @@ body {
   height: 30px;
   justify-content: center;
   align-items: center;
-  /* background-color: var(--primary-white-color); */
+  background-color: var(--primary-white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
@@ -359,9 +361,29 @@ body {
 .works-list {
   display: flex;
 }
-
+.works-list-item {
+  position: relative;
+}
 .works-list-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.works-list-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  display: inline-block;
+  height: 70px;
+  width: 100%;
+  padding: 25px 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
 }
 
 /* TEAM */
@@ -623,6 +645,7 @@ body {
 
 .examples-link {
   display: block;
+  position: relative;
 }
 
 .examples-link:hover,
@@ -651,4 +674,31 @@ body {
   font-size: 16px;
   line-height: 1.88;
   color: var(--primary-text-color);
+}
+
+.examples-img-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.box-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  text-align: left;
+
+  color: var(--primary-white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  font-size: 18px;
+  line-height: 1.56;
+
+  transform: translateY(-100%);
+}
+
+.examples-img-box:hover .box-overlay {
+  transform: translateY(0);
 }
